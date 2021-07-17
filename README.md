@@ -9,7 +9,7 @@ This project idea came from reading the [app ideas repo](https://github.com/flor
   - [react docs](https://reactjs.org/)
   - [hooks](https://youtu.be/f687hBjwFcM)
   - [redux](https://youtu.be/iBUJVy8phqw)
--TypeScript [resorces](https://www.typescriptlang.org/)
+- TypeScript [resorces](https://www.typescriptlang.org/)
 
 ## Available Scripts
 
