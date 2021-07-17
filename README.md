@@ -4,7 +4,7 @@ This project idea came from reading the [app ideas repo](https://github.com/flor
 
 ## Skilles Acquired through this project
 
-- the usage of flex-box - [resorces](https://flexboxfroggy.com) 
+- the usage of flex-box - [resorces](https://flexboxfroggy.com)
 - React Basics - resorces:
   - [react docs](https://reactjs.org/)
   - [hooks](https://youtu.be/f687hBjwFcM)

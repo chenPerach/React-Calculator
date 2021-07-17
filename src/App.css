@@ -1,12 +1,72 @@
 .test_div {
-  width: 200px;
-  height: 200px;
   background-color: red;
 }
-.calculator {
+.cal_button{
   display: flex;
-  flex: column;
-  width: 30vw;
-  height: 40vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  border-color: #551c0d;
+  border-width: 1px;
+  border-style: groove;
+  font-weight: lighter;
+}
+.cal_button.action {
+  background-color: #f99011;
+  color: #fffadf;
+}
+#add {
+  grid-row: 4/span 1;
+  grid-column: 4/span 1;
+}
+#sub  {
+  grid-row: 5/span 1;
+  grid-column: 4/span 1;
+}
+#mul  {
+  grid-row: 6/span 1;
+  grid-column: 4/span 1;
+}
+#dev  {
+  grid-row: 7/span 1;
+  grid-column: 4/span 1;
+}
+#eq {
+  grid-row: 8/span 1;
+  grid-column: 4/span 1;
+}
+div .center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(4,25%);
+  grid-template-rows: repeat(8,12.5%);
   background-color: red;
+}
+#screen {
+  display: flex;
+  grid-column: 1/span 4;
+  grid-row: 1/span 3;
+  background-color: #202020;
+  color: #fefefe;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px 20px 10px 10px;
+  font: inherit;
+  font-size: 50px;
+}
+@media only screen and (max-width: 1000px) {
+  .calculator{
+    width: 100vw;
+    height: 100vh;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .calculator {
+    min-width: 400px;
+    min-height: 600px;
+  }
 }

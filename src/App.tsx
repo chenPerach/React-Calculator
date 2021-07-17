@@ -4,7 +4,8 @@ import "./App.css";
 import { Calculator } from "./Calculator";
 
 function App() {
-  return <div className="calculator">
+  
+  return <div className="center">
     <Calculator />
   </div>;
 }
