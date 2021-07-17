@@ -5,7 +5,7 @@ interface CalculatorProps {
     prevCalc?:number,
 }
 export const Calculator :FC =() => {
-    const [props,setProps] = useState<CalculatorProps>({currentVal: 0,prevCalc:10});
+    const [props,_] = useState<CalculatorProps>({currentVal: 0,prevCalc:10});
 
     return (
         <div className="calculator">
