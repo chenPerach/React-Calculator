@@ -1,5 +1,4 @@
 import React,{FC, useState} from 'react'
-import { preProcessFile } from 'typescript';
 import './App.css';
 interface CalculatorProps { 
     currentVal:number,
