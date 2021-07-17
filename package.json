@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "calculator",
+=======
+  "name": "my-app",
+>>>>>>> master
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -51,9 +55,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+<<<<<<< HEAD
   },
   "devDependencies": {
     "@types/react": "^17.0.14",
     "@types/react-responsive": "^8.0.3"
+=======
+>>>>>>> master
   }
 }
