@@ -1,6 +1,4 @@
-.test_div {
-  background-color: red;
-}
+
 .cal_button{
   display: flex;
   align-items: center;
@@ -47,7 +45,6 @@ div .center {
   display: grid;
   grid-template-columns: repeat(4,25%);
   grid-template-rows: repeat(6,16.66%);
-  background-color: red;
 }
 .screen_content {
   align-self: flex-end;
