@@ -1,6 +1,15 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project idea came from reading the [app ideas repo](https://github.com/florinpop17/app-ideas).
+
+## Skilles Acquired through this project
+
+- the usage of flex-box - [resorces](https://flexboxfroggy.com) 
+- React Basics - resorces:
+  - [react docs](https://reactjs.org/)
+  - [hooks](https://youtu.be/f687hBjwFcM)
+  - [redux](https://youtu.be/iBUJVy8phqw)
+-TypeScript [resorces](https://www.typescriptlang.org/)
 
 ## Available Scripts
 
