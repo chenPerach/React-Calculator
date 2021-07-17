@@ -10,21 +10,21 @@ export const Calculator :FC =() => {
     return (
         <div className="calculator">
             <CalcScreen currentVal={props.currentVal} prevCalc={props.prevCalc} />
-            <div className="cal_button action" id="add">+</div>
-            <div className="cal_button action" id="sub">-</div>
-            <div className="cal_button action" id="mul">x</div>
-            <div className="cal_button action" id="dev">%</div>
-            <div className="cal_button action" id="eq">=</div>
-            <div className="cal_button text">1</div>
-            <div className="cal_button text">2</div>
-            <div className="cal_button text">3</div>
-            <div className="cal_button text">4</div>
-            <div className="cal_button text">5</div>
-            <div className="cal_button text">6</div>
-            <div className="cal_button text">7</div>
-            <div className="cal_button text">8</div>
-            <div className="cal_button text">9</div>
-            <div className="cal_button text" id="dot">.</div>
+            <button className="cal_button action" id="add">+</button>
+            <button className="cal_button action" id="sub">-</button>
+            <button className="cal_button action" id="mul">x</button>
+            <button className="cal_button action" id="dev">%</button>
+            <button className="cal_button action" id="eq">=</button>
+            <button className="cal_button text">1</button>
+            <button className="cal_button text">2</button>
+            <button className="cal_button text">3</button>
+            <button className="cal_button text">4</button>
+            <button className="cal_button text">5</button>
+            <button className="cal_button text">6</button>
+            <button className="cal_button text">7</button>
+            <button className="cal_button text">8</button>
+            <button className="cal_button text">9</button>
+            <button className="cal_button text" id="dot">.</button>
         </div>
     )
 }
