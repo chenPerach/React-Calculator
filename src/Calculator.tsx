@@ -1,12 +1,11 @@
 import React,{FC, useState} from 'react'
-import { preProcessFile } from 'typescript';
 import './App.css';
 interface CalculatorProps { 
     currentVal:number,
     prevCalc?:number,
 }
 export const Calculator :FC =() => {
-    const [props,setProps] = useState<CalculatorProps>({currentVal: 0,prevCalc:100});
+    const [props] = useState<CalculatorProps>({currentVal: 0,prevCalc:10});
 
     return (
         <div className="calculator">
