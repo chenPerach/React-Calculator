@@ -7,10 +7,11 @@ import {
   eq,
 } from "./redux/features/calculator/CalculatorSlice";
 import { useAppSelector, useCalculatorDispatch } from "./redux/hooks";
+import { RootState } from "./redux/store";
 
 export const Calculator: FC = () => {
   const dispatch = useCalculatorDispatch();
-  const props: CalculatorState = useAppSelector((state) => state.calculator);
+  const props: CalculatorState = useAppSelector((state : RootState) => state.calculator);
 
   return (
     <div className="calculator">
