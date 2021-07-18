@@ -1,38 +1,115 @@
-import React,{FC, useState} from 'react'
-import './App.css';
-interface CalculatorProps { 
-    currentVal:number,
-    prevCalc?:number,
-}
-export const Calculator :FC =() => {
-    const [props] = useState<CalculatorProps>({currentVal: 0,prevCalc:10});
+import React, { FC } from "react";
+import "./App.css";
+import {
+  addAction,
+  addSymbol,
+  CalculatorState,
+  eq,
+} from "./redux/features/calculator/CalculatorSlice";
+import { useAppSelector, useCalculatorDispatch } from "./redux/hooks";
 
-    return (
-        <div className="calculator">
-            <CalcScreen currentVal={props.currentVal} prevCalc={props.prevCalc} />
-            <button className="cal_button action" id="add">+</button>
-            <button className="cal_button action" id="sub">-</button>
-            <button className="cal_button action" id="mul">x</button>
-            <button className="cal_button action" id="dev">%</button>
-            <button className="cal_button action" id="eq">=</button>
-            <button className="cal_button text">1</button>
-            <button className="cal_button text">2</button>
-            <button className="cal_button text">3</button>
-            <button className="cal_button text">4</button>
-            <button className="cal_button text">5</button>
-            <button className="cal_button text">6</button>
-            <button className="cal_button text">7</button>
-            <button className="cal_button text">8</button>
-            <button className="cal_button text">9</button>
-            <button className="cal_button text" id="dot">.</button>
-        </div>
-    )
-}
+export const Calculator: FC = () => {
+  const dispatch = useCalculatorDispatch();
+  const props: CalculatorState = useAppSelector((state) => state.calculator);
 
-const CalcScreen : FC<CalculatorProps> = ({currentVal,prevCalc}:CalculatorProps)=>{
-    return (
-     <div id="screen">
-        <div className="screen_content">{currentVal}</div> <div className="screen_content prev">{prevCalc}</div>
-     </div>
-    );
-}
+  return (
+    <div className="calculator">
+      <CalcScreen
+        currentValue={props.currentValue}
+        prevValue={props.prevValue}
+      />
+      <button onClick={()=>dispatch(addAction("+"))} className="cal_button action" id="add">
+        +
+      </button>
+      <button onClick={()=>dispatch(addAction("-"))} className="cal_button action" id="sub">
+        -
+      </button>
+      <button onClick={()=>dispatch(addAction("*"))} className="cal_button action" id="mul">
+        x
+      </button>
+      <button onClick={()=>dispatch(addAction("/"))} className="cal_button action" id="dev">
+        %
+      </button>
+      <button onClick={()=>dispatch(eq())} className="cal_button action" id="eq">
+        =
+      </button>
+      <button
+        onClick={() => {
+            console.log("here");
+          dispatch(addSymbol("1"));
+        }}
+        className="cal_button text"
+      >
+        1
+      </button>
+      <button
+        onClick={() => dispatch(addSymbol("2"))}
+        className="cal_button text"
+      >
+        2
+      </button>
+      <button
+        onClick={() => dispatch(addSymbol("3"))}
+        className="cal_button text"
+      >
+        3
+      </button>
+      <button
+        onClick={() => dispatch(addSymbol("4"))}
+        className="cal_button text"
+      >
+        4
+      </button>
+      <button
+        onClick={() => dispatch(addSymbol("5"))}
+        className="cal_button text"
+      >
+        5
+      </button>
+      <button
+        onClick={() => dispatch(addSymbol("6"))}
+        className="cal_button text"
+      >
+        6
+      </button>
+      <button
+        onClick={() => dispatch(addSymbol("7"))}
+        className="cal_button text"
+      >
+        7
+      </button>
+      <button
+        onClick={() => dispatch(addSymbol("8"))}
+        className="cal_button text"
+      >
+        8
+      </button>
+      <button
+        onClick={() => dispatch(addSymbol("9"))}
+        className="cal_button text"
+      >
+        9
+      </button>
+      <button
+        onClick={() => dispatch(addSymbol("."))}
+        className="cal_button text"
+        id="dot"
+      >
+        .
+      </button>
+    </div>
+  );
+};
+
+const CalcScreen: FC<CalculatorState> = ({
+  currentValue,
+  prevValue,
+  action,
+}: CalculatorState) => {
+  return (
+    <div id="screen">
+      <div className="screen_content">{currentValue}</div>{" "}
+      <div className="screen_content prev">{prevValue}</div>
+    </div>
+  );
+};
