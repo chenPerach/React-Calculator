@@ -92,9 +92,14 @@ export const Calculator: FC = () => {
         9
       </button>
       <button
+        onClick={() => dispatch(addSymbol("0"))}
+        className="cal_button text"
+      >
+        0
+      </button>
+      <button
         onClick={() => dispatch(addSymbol("."))}
         className="cal_button text"
-        id="dot"
       >
         .
       </button>
