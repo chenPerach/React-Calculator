@@ -24,7 +24,7 @@ export const calculatorSlice = createSlice({
       state.currentValue = Number.parseFloat(state.currentValue).toString();
     },
     addAction: (state, action: PayloadAction<string>) => {
-      if (state.prevValue && state.action) {
+      if (state.prevValue && state.currentValue) {
         state.prevValue = preformAction(
           action.payload,
           Number(state.prevValue),
