@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { getLineAndCharacterOfPosition } from "typescript";
 // import { act } from "react-dom/test-utils";
 
 export interface CalculatorState {
@@ -30,9 +31,13 @@ export const calculatorSlice = createSlice({
           Number(state.prevValue),
           Number(state.currentValue)
         ).toFixed(4);
-        state = {...state,currentValue: "",action: ""}
-      } else 
-        state = {...state,prevValue: state.currentValue,action: action.payload,currentValue: ""};
+        state.currentValue = "";
+        state.action = "";
+      } else {
+        state.prevValue = state.currentValue;
+        state.action = action.payload;
+        state.currentValue = "";
+      }
     },
     eq: (state) => {
       if (state.prevValue && state.currentValue && state.action) {
