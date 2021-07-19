@@ -11,7 +11,7 @@ import { RootState } from "./redux/store";
 
 export const Calculator: FC = () => {
   const dispatch = useCalculatorDispatch();
-  const props: CalculatorState = useAppSelector((state : RootState) => state.calculator);
+  const props: CalculatorState = useAppSelector((state:RootState) => state.calculator);
 
   return (
     <div className="calculator">
